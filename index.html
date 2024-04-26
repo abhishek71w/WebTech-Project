@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Restaurant Website</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body>
+    <div class="top">
+        <div class="logo">
+            <img src="logo.svg" alt="logo">
+        </div>
+        <div class="nav">
+            <a href="#">Home</a>
+            <a href="#menu1">Menu</a>
+            <a href="#chef">Chef</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="search" ng-app="myapp" ng-controller="ctrl">
+            <input type="text" placeholder="Order Food ...." class="searchh" ng-model="Abhishek">
+            <ul ng-if="Abhishek" class="drop">
+                <li ng-repeat="food in foods | filter:swl">{{food}}</li>
+            </ul>
+        </div>
+        <div class="search">
+            <i class="fa-solid fa-search"></i>
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+
+    <div class="heading">
+        <div class="left">
+            <p>Are You Hungry</p>
+            <h1>Don't Wait</h1>
+            <span class="role">
+                <p>Let's start to order food now</p>
+            </span>
+        </div>
+
+        <div class="right" id="food">
+
+        </div>
+    </div>
+
+    <div class="bottom">
+        <div class="menu">
+            <div id="food1"></div>
+            <div id="food2"></div>
+        </div>
+    </div>
+
+    <!-- Menu Section -->
+    <div id="menu1">
+        <h1 id="section">Menu</h1>
+        <div id="menurow">
+            <div id="menucol">
+                <h2>Breakfast</h2>
+                <div class="box">
+                    <div id="image">
+                        <img src="breakfast1.webp">
+                    </div>
+                    <div>
+                        <h3>Tasty Dish 01</h3>
+                        <h4>10$</h4>
+                    </div>
+                </div>
+                <div class="box">
+                    <div id="image">
+                        <img src="brakfast2.jpg">
+                    </div>
+                    <div>
+                        <h3>Tasty Dish 01</h3>
+                        <h4>10$</h4>
+                    </div>
+                </div>
+                <div class="box">
+                    <div id="image">
+                        <img src="breakfast3.jpg">
+                    </div>
+                    <div>
+                        <h3>Tasty Dish 01</h3>
+                        <h4>10$</h4>
+                    </div>
+                </div>
+            </div>
+            <div id="menucol">
+                <h2>Lunch</h2>
+                <div class="box">
+                    <div id="image">
+                        <img src="lunch 1.jpeg">
+                    </div>
+                    <div>
+                        <h3>Tasty Dish 01</h3>
+                        <h4>10$</h4>
+                    </div>
+                </div>
+                <div class="box">
+                    <div id="image">
+                        <img src="lunch2.jpeg">
+                    </div>
+                    <div>
+                        <h3>Tasty Dish 01</h3>
+                        <h4>10$</h4>
+                    </div>
+                </div>
+                <div class="box">
+                    <div id="image">
+                        <img src="lunch3.jpeg">
+                    </div>
+                    <div>
+                        <h3>Tasty Dish 01</h3>
+                        <h4>10$</h4>
+                    </div>
+                </div>
+            </div>
+            <div id="menucol">
+                <h2>Dinner</h2>
+                <div class="box">
+                    <div id="image">
+                        <img src="dinner3.png">
+                    </div>
+                    <div>
+                        <h3>Tasty Dish 01</h3>
+                        <h4>10$</h4>
+                    </div>
+                </div>
+                <div class="box">
+                    <div id="image">
+                        <img src="dinner4.png">
+                    </div>
+                    <div>
+                        <h3>Tasty Dish 01</h3>
+                        <h4>10$</h4>
+                    </div>
+                </div>
+                <div class="box">
+                    <div id="image">
+                        <img src="dinner5.png">
+                    </div>
+                    <div>
+                        <h3>Tasty Dish 01</h3>
+                        <h4>10$</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chef Section -->
+    <div id="chef">
+        <h1 id="section">Chef</h1>
+        <div id="chefrow">
+            <div id="chefcol">
+                <div id="img">
+                    <img src="team_member_1.png">
+                </div>
+                <div>
+                    <h4>Mark john</h4>
+                </div>
+            </div>
+            <div id="chefcol">
+                <div id="img">
+                    <img src="team_member_2.png">
+                </div>
+                <div>
+                    <h4>Louis Taker</h4>
+                </div>
+            </div>
+            <div id="chefcol">
+                <div id="img">
+                    <img src="team_member_3.png">
+                </div>
+                <div>
+                    <h4>Brock Cena</h4>
+                </div>
+            </div>
+            <div id="chefcol">
+                <div id="img">
+                    <img src="team_member_4.png">
+                </div>
+                <div>
+                    <h4>Shane Watson</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about">
+        <h1 id="section">About</h1>
+        <div id="aboutrow">
+            <div id="aboutcol">
+                <h1>About Us</h1>
+                <p>"Welcome to Foody Fresh Restaurant, where passion for flavor meets a commitment to quality. Nestled in the heart of UttarPradesh Muzaffarnagar, our culinary team crafts each dish with care, sourcing the freshest ingredients to deliver an unforgettable dining experience. From our cozy ambiance to our attentive service, every aspect of foody fresh Restaurant is designed to delight your senses. Whether you're craving classic comfort food or daring to explore new culinary frontiers, join us and savor the artistry of food at its finest."</p>
+            </div>
+            <div class="aboutcol">
+                <div id="aboutimg">
+                    <img src="about1.jpeg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact">
+        <h1 id="section">Contact</h1>
+        <div id="contactrow">
+            <div id="contactcol">
+                <div>
+                    <p>
+                        <i class="fa fa-map-marker">
+                            UttarPradesh, District Muzaffarnagar
+                        </i>
+                    </p>
+                    <p>
+                        <a href="mailto:Abhishek.107372@stu.upes.ac.in">
+                            <i class="fa fa-envelope"></i>
+                        Abhishek.107372@stu.upes.ac.in
+                        </a>
+                    </p>
+                    <p>
+                        <a href="tel:+9149375057">
+                            <i class="fa fa-phone-square"></i>
+                            +9149375057</a>
+                    </p>
+                    <h3>Follow Us</h3>
+                    <p id="social">
+                        <a href="">
+                            <i class="fa fa-facebook-official fa-2x"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa fa-instagram fa-2x"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa fa-twitter-square fa-2x"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa fa-youtube fa-2x"></i>
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div id="contactcol">
+                <form>
+                    <h2>Get in Touch</h2>
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                    <input type="text" placeholder="subject">
+                    <textarea rows="6" placeholder="Type Messgae"></textarea>
+                    <button>Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div id="fotter">
+        <div>
+            <h5>Copyright &copy;2024 | <a href="">Abhishek Sharma</a></h5>
+        </div>
+        <div id="top">
+            <a href="">
+                <i class="fa fa-chevron-circle-up"></i>
+            </a>
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
+  <script>
+    var typeData = new Typed(".role", {
+      strings: [
+
+      "Let's start to order food now",
+      "Check Out Menu",
+      
+      ],
+      loop: true,
+      typeSpeed: 70,
+      backSpeed: 50,
+      backDelay: 1,
+    });
+  </script>
+</body>
+</html>
